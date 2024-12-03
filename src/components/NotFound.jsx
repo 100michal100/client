@@ -1,38 +1,44 @@
 import { Box, Typography, Button } from '@mui/material';
 import ImageSearchIcon from '@mui/icons-material/ImageSearch';
+import { useTheme } from '@mui/material/styles';
+import { useNavigate } from 'react-router-dom';
 
 export const NotFound = () => {
+    const theme = useTheme();
+    const navigate = useNavigate();
+
     return (
         <Box sx={{
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            height: '100vh',
-            backgroundColor: '#121212',
-            color: '#fff',
+            backgroundColor: theme.palette.background.default,
+            color: theme.palette.text.primary,
             textAlign: 'center',
+            minHeight: '100vh',
+            width: '100%',
+            margin: 0,
         }}
         >
             <Typography variant="h1" sx={{
-                fontSize: '100px', fontFamily: 'Fredoka',
-                fontWeight: 400, lineHeight: '121px', color: '#49ACEF'
+                color: theme.palette.primary.light,
             }}>
                 404
             </Typography>
             <Typography variant="h5" sx={{
-                fontSize: '40px', fontFamily: 'Open Sans',
-                fontWeight: 400, lineHeight: '54.47px', color: '#FFFFFF'
+                color: theme.palette.text.primary,
             }}
             >
                 הדף לא נמצא
             </Typography>
             <Box sx={{ mb: 2 }}>
-                <ImageSearchIcon sx={{ color: '#F1C40F' }} />
+                <ImageSearchIcon sx={{
+                    color: theme.palette.secondary.dark,
+                }} />
             </Box>
             <Typography variant="body1" sx={{
-                fontSize: '20px', fontFamily: 'Open Sans',
-                fontWeight: 400, lineHeight: '27.24px', color: '#FFFFFF'
+                color: theme.palette.text.primary,
             }}>
                 ...מצטערים, אבל לא הצלחנו למצוא את הדף שאתה מחפש
             </Typography>
@@ -40,9 +46,9 @@ export const NotFound = () => {
                 <Button
                     variant="contained"
                     color="primary"
-                    onClick={() => (window.location.href = '/home')}
+                    onClick={() => navigate('/home')}
                     sx={{
-                        fontSize: '20px', fontFamily: 'Fredoka', fontWeight: 400, lineHeight: '24.2px', color: '#F1C40F'
+                        color: theme.palette.secondary.dark,
                     }}
                 >
                     חזרה לדף הבית
