@@ -22,11 +22,17 @@ export const NotFound = () => {
         }}
         >
             <Typography variant="h1" sx={{
+                fontSize: '100px',
+                fontFamily: 'Fredoka',
+                fontWeight: 400,
                 color: theme.palette.primary.light,
             }}>
                 404
             </Typography>
             <Typography variant="h5" sx={{
+                fontSize: '40px',
+                fontFamily: 'Open Sans',
+                fontWeight: 400,
                 color: theme.palette.text.primary,
             }}
             >
@@ -38,6 +44,9 @@ export const NotFound = () => {
                 }} />
             </Box>
             <Typography variant="body1" sx={{
+                fontSize: '20px',
+                fontFamily: 'Open Sans',
+                fontWeight: 400,
                 color: theme.palette.text.primary,
             }}>
                 ...מצטערים, אבל לא הצלחנו למצוא את הדף שאתה מחפש
@@ -48,6 +57,9 @@ export const NotFound = () => {
                     color="primary"
                     onClick={() => navigate('/home')}
                     sx={{
+                        fontSize: '20px',
+                        fontFamily: 'Fredoka',
+                        fontWeight: 400,
                         color: theme.palette.secondary.dark,
                     }}
                 >
