@@ -27,14 +27,17 @@ export const NotFound = () => {
             }}>
                 404
             </Typography>
-            <Typography variant="h5" sx={{
+            <Typography variant="h4" sx={{
                 fontFamily: 'Open Sans',
                 color: theme.palette.text.primary,
             }}
             >
                 הדף לא נמצא
             </Typography>
-            <Box sx={{ mb: 2 }}>
+            <Box sx={{
+                mb: 2,
+                mt: 2
+            }}>
                 <ImageSearchIcon sx={{
                     color: theme.palette.secondary.dark,
                 }} />
@@ -53,6 +56,7 @@ export const NotFound = () => {
                     sx={{
                         fontFamily: 'Fredoka',
                         color: theme.palette.secondary.dark,
+                        borderRadius: '30px',
                     }}
                 >
                     חזרה לדף הבית
